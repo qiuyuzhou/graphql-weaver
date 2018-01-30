@@ -31,9 +31,15 @@ var CustomScalarTypesSerializationTransformer = /** @class */ (function () {
 }());
 exports.CustomScalarTypesSerializationTransformer = CustomScalarTypesSerializationTransformer;
 function parseValue(value) {
-    return value || false;
+    if (value == undefined || value == null) {
+        return false;
+    }
+    return value;
 }
 function parseLiteral(value) {
-    return value || false;
+    if (value == undefined || value == null) {
+        return false;
+    }
+    return value;
 }
 //# sourceMappingURL=custom-scalar-types-serialization.js.map
